@@ -1,0 +1,11 @@
+<h1>Show Crypto</h1>
+
+<table class="table table-bordered table-striped">
+    <tbody>
+        <% for(crypto of results){%> 
+        <tr> 
+            <td><%= crypto.AssetLong %>, <%= crypto.SystemProtocol %>, <%= crypto.WithdrawTxFee %><td> 
+        </tr>
+        <% } %>
+    </tbody>
+</table>
