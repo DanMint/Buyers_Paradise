@@ -5,9 +5,29 @@ var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 const layouts = require("express-ejs-layouts");
 const axios = require('axios');
+const session = require("express-session"); // to handle sessions using cookies
+
 
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
+
+// *********************************************************** //
+//  Connecting to the database
+// *********************************************************** //
+
+const mongoose = require( 'mongoose' );
+//const mongodb_URI = 'mongodb://localhost:27017'
+const mongodb_URI = 'mongodb+srv://cs_sj:BrandeisSpr22@cluster0.kgugl.mongodb.net/myFirstDatabase?retryWrites=true&w=majority'
+
+mongoose.connect( mongodb_URI, { useNewUrlParser: true, useUnifiedTopology: true } );
+// fix deprecation warnings
+// mongoose.set('useFindAndModify', false); 
+// mongoose.set('useCreateIndex', true);
+
+const db = mongoose.connection;
+db.on('error', console.error.bind(console, 'connection error:'));
+db.once('open', function() {console.log("we are connected!!!")});
+
 
 var app = express();
 
@@ -20,6 +40,17 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
+
+app.use(
+  session({
+    secret: "zzbbyanana789sdfa8f9ds8f90ds87f8d9s789fds", // this ought to be hidden in process.env.SECRET
+    resave: false,
+    saveUninitialized: false
+  })
+);
+
+const auth = require('./routes/auth')
+app.use(auth)
 
 app.use(layouts);
 app.use('/', indexRouter);
