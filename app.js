@@ -6,7 +6,7 @@ var logger = require('morgan');
 const layouts = require("express-ejs-layouts");
 const axios = require('axios');
 const session = require("express-session"); // to handle sessions using cookies
-
+const exam5 = require('./routes/exam5');
 
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
@@ -28,6 +28,12 @@ const db = mongoose.connection;
 db.on('error', console.error.bind(console, 'connection error:'));
 db.once('open', function() {console.log("we are connected!!!")});
 
+const isLoggedIn = (req,res,next) => {
+  if (res.locals.loggedIn) {
+    next()
+  }
+  else res.redirect('/login')
+}
 
 var app = express();
 
@@ -40,6 +46,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
+app.use(exam5);
 
 app.use(
   session({
@@ -73,6 +80,7 @@ app.post("/FinancialCalculator",
  })
 
 app.get('/cryptoApi',
+  isLoggedIn,
   async (req,res,next) => {
   const response = await axios.get('https://nova.bitcambio.com.br/api/v3/public/getassets')
   console.dir(response.data.length)
