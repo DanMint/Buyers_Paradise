@@ -1,3 +1,7 @@
 # web_development_152a
 
-This project is a ecomerce website for luxary watches. Here the user can view products, log in, log out, write and write what they want when loged in.
+This is the reposotary for class 152a web development summer course at Brandeis. Here i have decided to create an ecomerce website for watches. This project consists of a home page that looks very nice with a very nice picture and showcasing the diffrent whatch brands. Then the project showcases all the watches. This projects has log in and sign up, api checks for current crypto currenies and a conection to mongoDB.
+
+To run the app localy: 1.Dowload the zip file 2. have npm and type npm install in the terminal 3. write npm start
+
+Enjoy
