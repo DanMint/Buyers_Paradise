@@ -6,6 +6,8 @@ To run the app localy: 1.Dowload the zip file 2. have npm and type npm install i
 
 <p float="left">
     <img src="https://user-images.githubusercontent.com/67702241/178078310-34f97289-dc89-4657-b27d-a91d30aebd38.png">
+    <img width="1338" alt="Screen Shot 2022-07-08 at 6 28 29 PM" src="https://user-images.githubusercontent.com/67702241/178078438-211b88a1-d2ed-4be0-a393-4708ab46a57e.png">
+
 </p>
 
 Enjoy
