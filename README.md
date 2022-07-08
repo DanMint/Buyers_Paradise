@@ -5,7 +5,7 @@ This is the reposotary for class 152a web development summer course at Brandeis.
 To run the app localy: 1.Dowload the zip file 2. have npm and type npm install in the terminal 3. write npm start
 
 <p float="left">
-  <img src="https://user-images.githubusercontent.com/67702241/130336848-146005b7-0818-4b6a-ba8f-1e66a732a2c6.png" width="301" />
+  <img width="1338" alt="Screen Shot 2022-07-08 at 6 28 29 PM" src="https://user-         images.githubusercontent.com/67702241/178078155-ae20bf08-d15c-4f0f-a39e-7b9e3341cd8b.png" width="301" />
   &nbsp;&nbsp;
   <img src="https://user-images.githubusercontent.com/67702241/130336850-052f2ddb-2aa6-4b44-839d-1ad01d326129.png" width="307" /> 
   &nbsp;&nbsp;
