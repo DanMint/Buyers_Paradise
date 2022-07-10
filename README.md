@@ -4,10 +4,24 @@ This is the reposotary for class 152a web development summer course at Brandeis.
 
 To run the app localy: 
     
-    1.Dowload the zip file 
+    1. Dowload the zip file 
     2. have npm and type npm install in the terminal 
     3. write npm start
+    
+Needed dependencies: 
 
+    "axios": "^0.27.2",
+    "bcrypt": "^5.0.1",
+    "cookie-parser": "~1.4.4",
+    "debug": "~2.6.9",
+    "ejs": "~2.6.1",
+    "express": "~4.16.1",
+    "express-ejs-layouts": "^2.5.1",
+    "express-session": "^1.17.3",
+    "http-errors": "~1.6.3",
+    "mongoose": "^6.4.1",
+    "morgan": "~1.9.1"
+   
 <p float="left">
     <img src="https://user-images.githubusercontent.com/67702241/178078310-34f97289-dc89-4657-b27d-a91d30aebd38.png">
     <img width="1338" alt="Screen Shot 2022-07-08 at 6 28 29 PM" src="https://user-images.githubusercontent.com/67702241/178078438-211b88a1-d2ed-4be0-a393-4708ab46a57e.png">
